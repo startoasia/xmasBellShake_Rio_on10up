@@ -1,0 +1,151 @@
+.bounce {
+    animation: bounce 2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1, 1) translate3d(0, 0, 0);
+    }
+
+    10% {
+        transform: scale(1.05, .95) translate3d(0, 0, 0);
+    }
+
+    30% {
+        transform: scale(.95, 1.05) translate3d(0, -8%, 0);
+    }
+
+    50% {
+        transform: scale(1.02, .97) translate3d(0, 0, 0);
+    }
+
+    57% {
+        transform: scale(1, 1) translate3d(0, -2%, 0);
+    }
+
+    64% {
+        transform: scale(1, 1) translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: scale(1, 1) translate3d(0, 0, 0);
+    }
+}
+
+.light {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    overflow: hidden;
+    display: block;
+    position: relative;
+}
+
+.light:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -150%;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.7) 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.7) 100%);
+    -webkit-transform: skewX(-25deg);
+    transform: skewX(-25deg);
+    animation: light 3s infinite ease-in-out;
+}
+
+@keyframes light {
+    0% {
+        left: -150%;
+    }
+
+    70% {
+        left: 150%;
+    }
+
+    100% {
+        left: 150%;
+    }
+}
+
+@keyframes moveDown {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(5px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        rotate: 5deg
+    }
+
+    50% {
+        rotate: -5deg
+    }
+
+    100% {
+        rotate: 5deg
+    }
+}
+
+@keyframes salerotate {
+    0% {
+        rotate: 2.5deg
+    }
+
+    50% {
+        rotate: -2.5deg
+    }
+
+    100% {
+        rotate: 2.5deg
+    }
+}
+
+.saleRotate {
+    animation: salerotate 2s infinite ease-in-out;
+    transform-origin: top center;
+    transform: translateY(0%);
+}
+
+.saleDown {
+    animation: saleDown 1s cubic-bezier(.18, .85, .48, .96);
+    transform: translateY(0%);
+    transform-origin: top center;
+}
+
+@keyframes saleDown {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    40% {
+        transform: translateY(15%);
+
+    }
+
+    55% {
+        transform: translateY(-10%);
+
+    }
+
+    80% {
+        transform: translateY(5%);
+
+    }
+
+    100% {
+        transform: translateY(0%);
+        rotate: 2.5deg
+    }
+}
